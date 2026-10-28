@@ -15,11 +15,5 @@ def chunk_text(text, size=800, overlap=100):
     return chunks
 if __name__ == "__main__":
     for num, text in extract_pages("samples/pdf_prueba_texto_seleccionable.pdf"):
-        print(num, text[:100]) 
-
-if __name__ == "__main__":
-    chunks = chunk_text("a" * 2000)
-    print(len(chunks))
-    for c in chunks:
-        print(len(c))
-
+        chunks = chunk_text(text)
+        print(f"Página {num}: {len(chunks)} chunks")
